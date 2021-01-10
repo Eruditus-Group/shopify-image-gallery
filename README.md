@@ -1,34 +1,38 @@
 # Shopify Image Gallary Challange
-### This is a Node express web application.
+    This is a Node express web application.
 
 # Applicatioin Link
 https://shopifyimagegallary.herokuapp.com
 
 
 # Available and working features
-### User Authentication.
-### Add images to image gallery from your dashboard.
-### Set image price.
-### SELL/BUY images.
-### Image shopping Cart functionalities.
-### Payment implementation with stripe.
-### Ability to manage images inventory history.
-### handle money.
+    User Authentication.
+    Add images to image gallery from your dashboard.
+    Set image price.
+    SELL/BUY images.
+    Image shopping Cart functionalities.
+    Payment implementation with stripe.
+    Ability to manage images inventory history.
+    handle money.
 
 
 
 
 # TODO:
 ## SEARCH function
--- from characteristics of the images
--- from text
--- from an image (search for similar images)
+    from characteristics of the images
+
+    from text
+
+    from an image (search for similar images)
 
 
 ## DELETE image(s)
--- one / bulk / selected / all images.
--- Prevent a user deleting images from another user (access control).
--- secure deletion of images.
+    one / bulk / selected / all images.
+
+    Prevent a user deleting images from another user (access control).
+
+    secure deletion of images.
 
 
 ### USAGE
