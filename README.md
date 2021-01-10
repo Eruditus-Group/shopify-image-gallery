@@ -36,7 +36,20 @@ https://shopifyimagegallary.herokuapp.com
 
 
 ### USAGE
-*Welcome, and thank you for contributing to this project..* 
+## To Buy An Image
+    *Visit the homepage* 
+    *Add to cart any image of choice* 
+    *Click on checkout to proceed to payment*
+    *To continue to payment you must login or create an account if you dont have any!* 
+    *Enter you payment details*
+
+## To Sell An Image
+    *Sign in to your dashboard* 
+    *Click on upload and sell image* 
+    *Fill the required image details*
+    *Click on upload* 
+    *Do always check your dashboard for any sell made*
+    
 
 ## Set up and Contribution
 To set up this project, first fork this repositiory to your own account
