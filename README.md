@@ -1,4 +1,4 @@
-# Shopify Image Gallary Challange
+# Shopify Image Gallery Challenge
     This is a Node express web application.
 
 # Applicatioin Link
