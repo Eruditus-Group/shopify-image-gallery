@@ -32,6 +32,8 @@ router.get('/profile',userController.isLoggedIn,userController.getUserDashBoard)
 // get sign in page
 router.get('/upload',userController.isLoggedIn,userController.getUploadPage);
 
+router.get('/viewUploads',userController.isLoggedIn,userController.getUploads);
+
 
 
 

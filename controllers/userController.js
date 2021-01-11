@@ -1,7 +1,7 @@
 const express = require('express');
 let Cart = require('../models/cart');
 let Order = require('../models/order');
-
+let Product = require('../models/product');
 
 
 
@@ -63,4 +63,21 @@ exports.getSignInPage = (req,res,next )=>{
 exports.getUploadPage = (req,res,next )=>{
     
     res.render('user/upload',{csrfToken: req.csrfToken()});
+}
+
+
+exports.getUploads = (req,res,next )=>{
+    let successMsg = req.flash('success')[0];
+    Product.find({user: req.user},function(err,data){
+        if (err) throw err;
+        let productChunks =[];
+        let chunkSize = 3;
+        for (let i=0; i<data.length; i += chunkSize ) {
+            productChunks.push(data.slice(i,i + chunkSize)); 
+        }
+        res.render('user/viewUploads', {title:"Shawarma Order App", products:productChunks, 
+        successMsg: successMsg, noMessages: !successMsg });
+    }).lean()
+    
+   
 }
