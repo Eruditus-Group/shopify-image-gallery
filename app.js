@@ -12,6 +12,7 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const validator = require("express-validator");
 const MongoStore = require("connect-mongo")(session);
+const cloudinary = require("cloudinary").v2;
 
 const userRouter = require("./routes/user");
 const ENV = require("dotenv");
@@ -42,6 +43,12 @@ app.listen(process.env.PORT || 8000);
 //passport configurations file require
 require("./config/passport");
 
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+  });
 
 // view engine setup
 app.engine(".hbs", expressHbs({ defualtLayout: "layout", extname: ".hbs" }));

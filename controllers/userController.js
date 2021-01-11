@@ -59,3 +59,8 @@ exports.getSignInPage = (req,res,next )=>{
     let messages = req.flash('error');
     res.render('user/signin',{csrfToken: req.csrfToken(),messages: messages, hasErrors: messages.length > 0});
 }
+
+exports.getUploadPage = (req,res,next )=>{
+    
+    res.render('user/upload',{csrfToken: req.csrfToken()});
+}
