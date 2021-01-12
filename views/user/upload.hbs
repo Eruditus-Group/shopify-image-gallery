@@ -65,6 +65,7 @@
                         {{/each}}
                     </div>
                     {{/if}}
+                   
                 </div>
                 <form  method="post" action="/user/upload?_csrf={{ csrfToken }}" novalidate enctype="multipart/form-data">
                     <div class="form-group">
@@ -73,7 +74,7 @@
                     </div>
                     <div class="form-group">
                         <label for="title">Price:</label>
-                        <input type="number" name="price" required class="form-control" placeholder="Image Price">
+                        <input type="number" name="price" min="0" step="5" max="100" required class="form-control" placeholder="Image Price">
                     </div>
 
                     <div class="form-group">

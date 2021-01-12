@@ -48,21 +48,31 @@ router.get('/logout',userController.isLoggedIn,function(req, res, next){
 // upload image products
 router.post('/upload',parser.single("image"), userController.isLoggedIn, function (req, res, next) {
 
-    new Product({
-        imagePath:req.file.url,
-        title: req.body.title,
-        description:req.body.description,
-        price:req.body.price,
-        user: req.user
-    }).save((err,result)=>{
-        if(err) throw err;
+    
 
-        if(result){
-           
-            req.flash('success', 'Image Uploaded successfully');
-            res.redirect('/');
-        }
-    });
+    if (req.body.price <= 0) {
+        let errorMessage = ["Invalid Price"];
+        req.flash("error", errorMessage);
+        let messages = req.flash('error')
+        res.render('user/upload',{csrfToken: req.csrfToken(),messages: messages, hasErrors: messages.length > 0})
+    }else{
+        new Product({
+            imagePath:req.file.url,
+            title: req.body.title,
+            description:req.body.description,
+            price:req.body.price,
+            user: req.user
+        }).save((err,result)=>{
+            if(err) throw err;
+    
+            if(result){
+               
+                req.flash('success', 'Image Uploaded successfully');
+                res.redirect('/');
+            }
+        });
+    
+    }
 
    
 });

@@ -54,11 +54,7 @@ https://shopifyimagegallary.herokuapp.com
 ## Set up and Contribution
 To set up this project, first fork this repositiory to your own account
 
-Pull the code to Your project directory and set it up by running the following command
-```bash
-git fetch upstream
-git checkout develop
-```
+
 To install the dependencies the app is using run the command (ensure you have node installed)
 ```
 npm install
